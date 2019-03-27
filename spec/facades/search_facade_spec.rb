@@ -11,10 +11,15 @@ RSpec.describe SearchFacade do
   end
 
   context 'instance methods' do
-    it 'returns an array of stations' do
-      expect(@facade.all_stations.class).to eq(Array)
+    it 'returns an count of total stations' do
+      expect(@facade.all_stations.class).to eq(Integer)
+      expect(@facade.all_stations).to eq(87)
+    end
 
-      @facade.all_stations.each do |station|
+    it 'returns an array of stations' do
+      expect(@facade.nearest_stations.class).to eq(Array)
+
+      @facade.nearest_stations.each do |station|
         expect(station.class).to eq(Station)
       end
     end
