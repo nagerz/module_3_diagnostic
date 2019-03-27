@@ -2,9 +2,12 @@
   <h1>Query Stations:</h1>
 
   <section class="total-stations">
-    <h3>Total Stations (<%= facade.all_stations.count %>):</h3>
-    <% facade.all_stations.each do |station| %>
-      <ul>
+    <h3>Total Stations (<%= facade.all_stations %>):</h3>
+  </section>
+
+  <section class="nearest-stations">
+    <% facade.nearest_stations.each do |station| %>
+      <ul class="station">
         <li class="name"> <%= station.name %> </li>
         <li class="address"> <%= station.address %> </li>
         <li class="fuel-types"> <%= station.fuel_types %> </li>

@@ -3,7 +3,7 @@ class NrelService
     @zip_code = zip_code
   end
 
-  def get_all_stations
+  def get_nearest_stations
     response = conn.get("alt-fuel-stations/v1/nearest")
     JSON.parse(response.body, symbolize_names: true)
   end
