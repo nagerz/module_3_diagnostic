@@ -2,6 +2,15 @@
   <h1>Query Stations:</h1>
 
   <section class="total-stations">
-    <h3>Total Stations <%= @facade.all_stations.count %></h3>
-    <% @facade.all_stations.each do |station| %>
-      
+    <h3>Total Stations (<%= facade.all_stations.count %>):</h3>
+    <% facade.all_stations.each do |station| %>
+      <ul>
+        <li class="name"> <%= station.name %> </li>
+        <li class="address"> <%= station.address %> </li>
+        <li class="fuel-types"> <%= station.fuel_types %> </li>
+        <li class="distance"> <%= station.distance %> </li>
+        <li class="access-times"> <%= station.access_times %> </li>
+      </ul>
+    <% end %>
+  </section>
+</section>
