@@ -20,8 +20,11 @@ RSpec.describe 'Search page' do
       expect(page).to have_content("Query Stations:")
 
       within '.total-stations' do
-        expect(page).to have_css(".station", count: 15)
         expect(page).to have_content("Total Stations (87):")
+      end
+
+      within ".nearest-stations" do
+        expect(page).to have_css(".station", count: 15)
 
         within(first(".station")) do
           expect(page).to have_css(".name")

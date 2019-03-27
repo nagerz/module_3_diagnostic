@@ -6,14 +6,15 @@
   </section>
 
   <section class="nearest-stations">
-    <% facade.nearest_stations.each do |station| %>
-      <ul class="station">
-        <li class="name"> <%= station.name %> </li>
-        <li class="address"> <%= station.address %> </li>
-        <li class="fuel-types"> <%= station.fuel_types %> </li>
-        <li class="distance"> <%= station.distance %> </li>
-        <li class="access-times"> <%= station.access_times %> </li>
-      </ul>
+    <% facade.nearest_stations(15).each do |station| %>
+      <section class="station">
+        <h5 class="name"> <%= station.name %> </h5>
+        <ul>
+          <li class="address"> <%= station.address %> </li>
+          <li class="fuel-types"> <%= station.fuel_types %> </li>
+          <li class="distance"> <%= station.distance %> </li>
+          <li class="access-times"> <%= station.access_times %> </li>
+        </ul>
     <% end %>
   </section>
 </section>
