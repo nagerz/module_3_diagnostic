@@ -4,7 +4,8 @@ class SearchFacade
   end
 
   def all_stations
-    response = ["data1", "data2"]
+    response = NrelService.new(@zip_code).get_all_stations
+    
     response.map do |station_data|
       Station.new(station_data)
     end

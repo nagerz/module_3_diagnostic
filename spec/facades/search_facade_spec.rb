@@ -7,7 +7,7 @@ RSpec.describe SearchFacade do
   end
 
   it 'exists' do
-    expect(facade).to be_a(SearchFacade)
+    expect(@facade).to be_a(SearchFacade)
   end
 
   context 'instance methods' do
