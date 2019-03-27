@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 
 gem 'rails', '5.1.4'
-gem 'sqlite3'
+gem 'sqlite3', '~> 1.3.6'
 gem 'sass-rails', '~> 5.0.6'
 gem 'bootstrap-sass', '~> 3.3.6'
 gem 'uglifier', '>= 1.3.0'
@@ -11,10 +11,16 @@ gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'faraday'
 gem 'figaro'
+gem 'factory_bot_rails'
+gem 'faker'
 
 group :development, :test do
   gem 'byebug'
   gem 'rspec-rails'
+  gem 'launchy'
+  gem 'pry'
+  gem 'shoulda-matchers', '~> 3.1'
+  gem 'database_cleaner'
 end
 
 group :development do
@@ -27,4 +33,3 @@ group :test do
   gem 'webmock'
   gem 'capybara'
 end
-
